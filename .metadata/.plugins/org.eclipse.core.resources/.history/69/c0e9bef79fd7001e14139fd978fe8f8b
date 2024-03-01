@@ -1,0 +1,15 @@
+package codeTech_IT_Solutions.com;
+
+import java.util.Scanner;
+public class HumanPlayer extends TicTacToe {
+	
+
+	
+	
+
+}
+
+
+
+
+

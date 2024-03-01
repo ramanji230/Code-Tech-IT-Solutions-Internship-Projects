@@ -1,0 +1,62 @@
+package sdbms;
+
+public class Student {
+
+	private String id;
+	private int age;
+	private String name;
+	//private int marks;
+	private double numSubjects;
+	private double grade;
+	private static int count=101;
+
+	public Student( int age, String name, double numSubjects, double grade) {
+		this.id="JSP"+count;
+		count++;
+		this.age=age;
+		this.name=name;
+		this.numSubjects=numSubjects;
+		this.grade=grade;
+	}
+
+
+	public String getId() {
+		return id;
+	}
+
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age=age;
+	}
+
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name=name;
+	}
+
+	public double getNumSubjects() {
+		return numSubjects;
+	}
+	public void setMarks(double numSubjects) {
+		this.numSubjects=numSubjects;
+	}
+	
+	
+
+	public double getGrade() {
+		return grade;
+	}
+
+	public void setGrade(double grade) {
+		this.grade = grade;
+	}
+
+
+	public String toString() {
+		return"ID:"+id+" Age:"+age+" Name:"+name+" numSubjects:"+numSubjects;
+	}
+}

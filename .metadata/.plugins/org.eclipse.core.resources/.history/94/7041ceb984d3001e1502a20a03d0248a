@@ -1,0 +1,13 @@
+package codeTech.com;
+
+import java.util.Scanner;
+
+public class NumberGuessingGame {
+
+	public static void main(String[] args) {
+		
+		Scanner ip = new Scanner(System.in);
+
+	}
+
+}

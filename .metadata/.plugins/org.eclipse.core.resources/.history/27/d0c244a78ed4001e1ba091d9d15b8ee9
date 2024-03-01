@@ -1,0 +1,9 @@
+package customException;
+
+public class StudentNotFoundException extends RuntimeException {
+
+	
+	private String message;
+	
+
+}

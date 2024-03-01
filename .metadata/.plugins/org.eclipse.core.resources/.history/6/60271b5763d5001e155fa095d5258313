@@ -1,0 +1,215 @@
+package sdbms;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+import customException.InvaildChoiceExpection;
+import customException.StudentNotFoundException;
+
+public class StudentManagementSystemImpl implements StudentManagementSystem {
+
+
+	Scanner ip = new Scanner(System.in);
+	//key-->Student Id & value-->Student Object
+
+	Map<String, Student> db = new LinkedHashMap<String,Student>();
+
+	@Override
+	public void addStudent(){
+
+/*
+		System.out.println("Enter Student Age");
+		int age=ip.nextInt();
+*/
+		System.out.println("Enter Student Name");
+		String name=ip.next();
+
+		System.out.println("Enter Student Number of Subjects :");
+		int numsubject=ip.nextInt();
+		
+		int totalMarks=0;
+		
+		for(int i=1; i<=numsubject; i++) {
+			System.out.println("Enter Marks for subject " + i + ": ");
+			int marks = ip.nextInt();
+		     totalMarks  =  totalMarks+marks%100;
+		     	
+		}
+		
+		double average = (double) totalMarks/numsubject;
+		
+		
+		
+		char grade;
+		
+		if(average >=90) {
+			grade = 'A';
+			
+			
+		}else if(average >=80) {
+			grade = 'B';
+		}else if(average >=70) {
+			grade = 'C';
+		}else if(average >=60) {
+			grade ='D';
+			
+		}else {
+			grade = 'F';
+		}
+		System.out.println("Student record inserted successfuly!");
+		System.out.println("---------------------------------------");
+		System.out.println("total points : " + average);
+		
+		System.out.println("Grade of marks :" + grade );
+
+		Student std = new Student(name, totalMarks);
+
+		db.put(std.getId(), std);
+
+		
+		System.out.println("your student id is"+std.getId());
+	}
+
+
+	@Override
+	public void displayStudent(){
+
+		System.out.println("Enter student Id:");
+		String id=ip.next();
+		id=id.toUpperCase();
+
+		if(db.containsKey(id)) {
+
+			System.out.println("Student Record Found");
+			System.out.println("student Details are Follows:");
+			System.out.println("----------------------------------");
+			Student std=db.get(id);
+			System.out.println("Id:"+std.getId());
+			//System.out.println("Age:"+std.getAge());
+			System.out.println("Name:"+std.getName());
+			System.out.println("Marks:"+std.getMarks());
+			
+		}
+		else {
+			
+			try {
+				String message = "Student with Id" +id+ "is Not Found!";
+				throw new StudentNotFoundException(message);
+			}
+		
+			catch(StudentNotFoundException e) {
+				
+				System.out.println(e.getMessage());
+			}
+		}
+	
+	}
+
+
+	@Override
+	public void displayAllStudent(){
+
+		if(!db.isEmpty()) {//checking if db is not empty
+			System.out.println("Student recoreds are Follows:");
+			System.out.println("---------------------------------");
+			
+			Set<String> keys = db.keySet();//jsp101, jsp102, jsp103 comes this o/p
+			for(String key : keys) {
+				Student std = db.get(key);//getting student object
+				System.out.println(std);//toString() is overridden	
+			}
+		}
+		else {
+			
+			try {
+				String message="No student Records to desplay";
+				throw new StudentNotFoundException(message);
+			}
+			catch(Exception e) {
+				System.out.println(e.getMessage());	
+			}	
+		}	
+	}
+
+	@Override
+	public void removeStudent() {
+
+		System.out.println("Enter Student id:");
+		String id=ip.next();
+		id=id.toUpperCase();
+
+		if(db.containsKey(id)) {
+			System.out.println("Student Record Found");
+			System.out.println(db.get(id));//printing student object
+			db.remove(id);//remove the entry (key & value)
+			System.out.println("Student Record Deleted Successfuly");
+		}
+		else {
+			try {
+				String message = "Student with Id"+id+"is not Found";
+				throw new StudentNotFoundException(message);
+			}
+			catch(StudentNotFoundException e) {
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+
+
+	@Override
+	public void  updateStudent() {
+
+		System.out.println("Enter student Id:");
+		String id=ip.next().toUpperCase();
+
+		if(db.containsKey(id)) {
+			System.out.println("Student record is Found");
+			Student std = db.get(id);//getting value (Student object)
+
+			System.out.println("1:Update Age: \n2:Update Name:");
+			System.out.println("3:Update Marks: \n4:Enter Choice");
+			int choice = ip.nextInt();
+
+			switch(choice) {
+			case 1:
+				System.out.println("Enter Age:");
+				int age=ip.nextInt();
+				//std.setAge(age);//std.setAge(ip.nextInt());
+				System.out.println("Age Update sucessfully");
+				break;
+
+			case 2:
+				System.out.println("Enter Name:");
+				String name=ip.next();
+				std.setName(name);
+				System.out.println("Name Update sucessfully");
+				break;
+
+			case 3:
+				System.out.println("Enter Marks");
+				int marks=ip.nextInt();
+				std.setMarks(marks);
+				System.out.println("Marks Update sucessfully");
+				break;
+
+			default:
+				try {
+					String message ="Invaild Choice, Enter Vaild Choice";
+					throw new InvaildChoiceExpection(message);
+				}
+				catch(Exception e) {
+					System.out.println(e.getMessage());
+				}
+			}
+		}
+		else {
+			try {
+				String message ="Student with Id "+id+"is not Found!";
+				throw new StudentNotFoundException(message);
+			}
+			catch(Exception e) {
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+}

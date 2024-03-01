@@ -1,0 +1,12 @@
+package codeTech_IT_Solutions.com;
+
+public interface TicTacToeInterface {
+
+	void initboard();
+	void dispBoard();
+	void placeMark();
+	boolean checkColWin();
+	boolean checkRowWin();
+	boolean checkDigWin();
+    boolean checkDraw();
+}

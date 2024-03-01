@@ -1,0 +1,39 @@
+package codeTech_IT_Solutions.com;
+
+import java.util.Scanner;
+
+public class HumanPlayer extends Player  {
+
+	public HumanPlayer(String name, char mark) {
+		this.name=name;
+		this.mark=mark;
+	}
+
+	void makeMove() {
+
+		Scanner ip = new Scanner(System.in);
+		int row;
+		int col;
+
+		do {
+
+			System.out.println("Enter the row and col 0 to 2");
+			row = ip.nextInt();
+			col = ip.nextInt();
+		}
+
+		while(!isVaildMove(row, col));
+
+		TicTacToe.placeMark(row, col, mark);
+		
+
+	}
+
+	@Override
+	public void placeMark() {
+		
+		
+	}
+
+}
+

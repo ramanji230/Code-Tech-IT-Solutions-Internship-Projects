@@ -1,0 +1,21 @@
+package codeTech_IT_Solutions.com;
+
+public class MainClass {
+
+   public static void main(String[] args) {
+	
+	   TicTacToe t = new TicTacToe();
+	   
+		t.dispBoard();
+		
+		System.out.println(t.checkColWin() + "won");
+
+		System.out.println(t.checkRowWin() + "won");
+		System.out.println(t.checkDigWin() + "won");
+		
+		t.dispBoard();
+		
+	}
+	   
+}
+

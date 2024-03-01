@@ -1,0 +1,11 @@
+package codeTech_IT_Solutions.com;
+
+public class TicTacToe {
+
+	static char board[][];
+	
+	public TicTacToe() {
+		board = new char[3][3];
+		initboard();
+	}
+}

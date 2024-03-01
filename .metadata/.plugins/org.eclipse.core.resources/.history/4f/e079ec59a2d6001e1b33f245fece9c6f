@@ -1,0 +1,41 @@
+package codeTech_IT_Solutions.com;
+
+public class LunchGame {
+
+public static void main(String[] args) {
+		
+		TicTacToe t = new TicTacToe();
+		
+		HumanPlayer p1 = new HumanPlayer("Ram", 'x');
+		
+		AI_Playing p2 = new AI_Playing("AI Playing", 'o');
+		
+		Player cp = p1;
+		
+		while(true) {
+			
+			System.out.println(cp.name + "Move");
+			cp.makeMove();
+			
+			TicTacToe.dispBoard();
+			
+			if(TicTacToe.checkColWin() || TicTacToe.checkRowWin() || TicTacToe.checkDigWin()) {
+				System.out.println(cp.name + " has won");
+			}
+				break;
+			
+			else if(TicTacToe.checkDraw()) {
+				System.out.println("Game is Draw");
+				break;
+			}
+			else {
+				if(cp == p1) {
+					cp = p2;
+				}
+				else {
+					cp = p1;
+				}
+			}
+		}
+	}
+}

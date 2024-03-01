@@ -1,0 +1,14 @@
+package customException;
+
+public class InvaildChoiceExpection extends RuntimeException{
+
+	private String message;
+
+	public StudentNotFoundException(String message) {
+		this.message=message;
+
+		String getMessage() {
+			return message;
+		}
+	}
+}

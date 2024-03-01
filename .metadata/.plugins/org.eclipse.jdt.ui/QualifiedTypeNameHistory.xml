@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="tic_tac_toe_Game.codeTech.TicTacToe.HumanPlayer"/>
+    <fullyQualifiedTypeName name="tic_tac_toe_Game.codeTech.TicTacToe"/>
+    <fullyQualifiedTypeName name="codeTech_IT_Solutions.com.TicTacToeInterfaceIMPL"/>
+    <fullyQualifiedTypeName name="codeTech_IT_Solutions.com.TicTacToeInterface"/>
+    <fullyQualifiedTypeName name="codeTech.com.Calculator"/>
+    <fullyQualifiedTypeName name="codeTech.com.CalculatorIMPL"/>
+    <fullyQualifiedTypeName name="codeTech_IT_Solutions.com.Player"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="codeTech.com.StudentGradeManagementSystem"/>
+    <fullyQualifiedTypeName name="codeTech.com.StudentGradeManagementSystemIMPLimplements"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="codeTech.com.Student"/>
+    <fullyQualifiedTypeName name="java.lang.Double"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="com.ty.Student"/>
+    <fullyQualifiedTypeName name="sdbms.StudentManagementSystem"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.LinkedHashMap"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="customException.InvaildChoiceExpection"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="customException.StudentNotFoundException"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="sdbms.Student"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="codetech.com.HumanPlayer"/>
+    <fullyQualifiedTypeName name="codetech.com.TicTacToe"/>
+    <fullyQualifiedTypeName name="codeTech_IT_Solutions.com.TicTacToe"/>
+</qualifiedTypeNameHistroy>

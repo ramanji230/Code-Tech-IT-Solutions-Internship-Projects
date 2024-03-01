@@ -1,0 +1,17 @@
+package codeTech.com;
+
+import java.util.Scanner;
+
+public class NumberGuessingGame {
+
+	public static void main(String[] args) {
+		
+		Scanner ip = new Scanner(System.in);
+		System.out.println("What is your Name?");
+		String name =ip.nextLine();
+		
+		System.out.println("Well, "+ name +", I am thinking of a number between 1 to 100 !");
+
+	}
+
+}

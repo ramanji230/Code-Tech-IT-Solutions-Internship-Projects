@@ -1,0 +1,9 @@
+package customSorting;
+
+import java.util.Comparator;
+
+import sdbms.Student;
+
+public class SortStudentByMarks implements Comparator<Student>{
+
+}

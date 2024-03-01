@@ -1,0 +1,51 @@
+package codeTech_IT_Solutions.com;
+
+public class TicTacToeInterfaceIMPL implements TicTacToeInterface {
+	
+
+
+	@Override
+	public void initboard() {
+        
+		
+	}
+	
+
+	@Override
+	public void dispBoard() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void placeMark() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean checkColWin() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean checkRowWin() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean checkDigWin() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean checkDraw() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	
+}

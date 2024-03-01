@@ -1,0 +1,10 @@
+package customException;
+
+public class InvaildChoiceExpection extends RuntimeException{
+
+	private String message;
+
+	
+	
+
+}
